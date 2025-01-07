@@ -1,6 +1,12 @@
 # Conway's Game of life
 
-The rules for the game:
+Conway's algorithm tried to simulate three scenarios for life: Underpopulation, Stasis and Overpopulation. 
+
+- Underpopulation - A live cell with fewer than two live neighbours.
+- Statis - A live cell with two or three neighbours lives onto the next generation.
+- Overpopulaiton  - A live cell with more than three live neighbours dies.
+
+The rules for the game can be broken down into:
 1. Any live cell with fewer than two live neighbours dies.
 2. Any live cell with two or three live neighbours lives on to the next generation.
 3. Any live cell with more than three live neighbours dies.

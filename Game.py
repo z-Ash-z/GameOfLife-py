@@ -10,6 +10,7 @@ from Simulation import Simulation
 def main() -> None:
     pygame.init()
 
+    # Initializing the default values.
     FPS = 30
     CELL_SIZE = 25
     WINDOW_WIDTH = 1000
@@ -22,16 +23,17 @@ def main() -> None:
     clock = pygame.time.Clock()
 
     simulation = Simulation(WINDOW_WIDTH, WINDOW_HEIGHT, CELL_SIZE)
-    simulation.grid.cells[3][4] = 1
+    simulation.grid.cells[3][4] = True
+    simulation.grid.cells[30][14] = True
 
     # Simulation Loop
-    while True:
+    running = True
+    while running:
 
         # 1. Event Handling
         for event in pygame.event.get():
             if event.type is pygame.QUIT:
-                pygame.quit()
-                sys.exit()
+                running = False
 
         # 2. Updating the State
 
@@ -41,6 +43,9 @@ def main() -> None:
 
         pygame.display.update()
         clock.tick(FPS)
+    
+    pygame.quit()
+    sys.exit()
 
 
 if __name__ == "__main__":
