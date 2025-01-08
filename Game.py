@@ -12,7 +12,8 @@ def main() -> None:
 
     # Initializing the default values.
     FPS = 30
-    CELL_SIZE = 25
+
+    CELL_SIZE = 5
     WINDOW_WIDTH = 1500
     WINDOW_HEIGHT = 1000
     GREY = (100, 100, 100)
@@ -23,12 +24,6 @@ def main() -> None:
     clock = pygame.time.Clock()
 
     simulation = Simulation(WINDOW_WIDTH, WINDOW_HEIGHT, CELL_SIZE)
-    # simulation.grid.cells[3][4] = True
-    # simulation.grid.cells[4][5] = True
-    # simulation.grid.cells[4][4] = True
-    # simulation.grid.cells[4][3] = True
-    # simulation.grid.cells[4][2] = True
-    # print(simulation.grid.count_neighbours(3, 5))
 
     # Simulation Loop
     running = True
