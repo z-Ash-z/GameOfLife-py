@@ -1,5 +1,9 @@
 # Conway's Game of life
 
+## What does this project do?
+
+This project simulates Conway's Game of Life, a cellular automaton devised by mathematician John Conway. It demonstrates how complex patterns and behaviors can emerge from simple rules applied to a grid of cells over successive generations.
+
 Conway's algorithm tried to simulate three scenarios for life: Underpopulation, Stasis and Overpopulation. 
 
 - Underpopulation - A live cell with fewer than two live neighbours.
