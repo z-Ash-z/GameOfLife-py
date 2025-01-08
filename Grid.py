@@ -16,15 +16,20 @@ class Grid:
         self.rows : int= height // cell_size
         self.columns : int = width // cell_size
         self.cell_size : int = cell_size
-        # self.cells : list[list[bool]] = [[False for _ in range(self.columns)] for _ in range(self.rows)]
-        self.random_start_state()
+        self.cells : list[list[bool]] = [[False for _ in range(self.columns)] for _ in range(self.rows)]
+
+    def clear(self) -> None:
+        """
+        Clears the grid.
+        """
+        self.cells : list[list[bool]] = [[False for _ in range(self.columns)] for _ in range(self.rows)]
 
     def random_start_state(self) -> None:
         """
         Randomly initializes the grid.
         """
-        import random
-        self.cells : list[list[bool]] = [[random.choice([True, False]) for _ in range(self.columns)] for _ in range(self.rows)]
+        from random import choice
+        self.cells : list[list[bool]] = [[choice([True, False]) for _ in range(self.columns)] for _ in range(self.rows)]
     
     def draw(self, window : pygame.Surface) -> None:
         """
