@@ -14,8 +14,8 @@ def main() -> None:
     FPS = 30
 
     CELL_SIZE = 5
-    WINDOW_WIDTH = 2000
-    WINDOW_HEIGHT = 2000
+    WINDOW_WIDTH = 1000
+    WINDOW_HEIGHT = 500
     GREY = (100, 100, 100)
 
     pygame.display.set_caption("Game of Life")
