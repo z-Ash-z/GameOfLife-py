@@ -15,7 +15,7 @@ def main() -> None:
 
     CELL_SIZE = 5
     WINDOW_WIDTH = 2000
-    WINDOW_HEIGHT = 1000
+    WINDOW_HEIGHT = 2000
     GREY = (100, 100, 100)
 
     pygame.display.set_caption("Game of Life")
@@ -42,7 +42,8 @@ def main() -> None:
                 elif event.key == pygame.K_LEFT:
                     FPS = max(1, FPS - 2)
                 elif event.key == pygame.K_SPACE:
-                    simulation.toggle_pause(window)
+                    simulation.toggle_pause(window
+                                            )
                 elif event.key == pygame.K_c:
                     simulation.clear()
                 elif event.key == pygame.K_r:
